@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import mongoose from "mongoose";
-import router from "./Routes/Auth";
+import authRoutes from "./Routes/Auth.js";
 
 dotenv.config();
 
@@ -23,7 +23,7 @@ async function ConnectDB() {
 app.use(express.json());
 app.use(cookieParser());
 
-app.use("/api/v1/Auth", router);
+app.use("/api/v1/auth", authRoutes);
 
 ConnectDB()
   .then(() => {
