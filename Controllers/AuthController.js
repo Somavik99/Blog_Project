@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import User from "../Models/UserSchema.js";
 import bcrypt from "bcrypt";
-import crypto from "crypto";
+// import crypto from "crypto";
 
 // User Registration controller
 
